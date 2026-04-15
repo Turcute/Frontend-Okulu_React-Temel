@@ -78,8 +78,68 @@ h6 {
 /* 
   11. Global styles for Contact Form
  */
- body{
-  font-family: 'Karla', sans-serif;}
+
+body {
+  font-family: 'Karla', sans-serif;
+}
+
+.input.inputError {
+  border-color: #e24b4a;
+}
+
+.textarea.inputError {
+  border-color: #e24b4a;
+}
+
+.input:hover,
+.textarea:hover {
+  border-color: #1a6e50;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #1a6e50;
+  box-shadow: 0 0 0 2px rgba(26, 110, 80, 0.2);
+}
+
+.radioOption:has(input:checked) {
+  border-color: #1a6e50;
+  background-color: #e8f5f0;
+}
+
+.submitBtn:hover {
+  background: #145c42;
+  cursor: pointer;
+}
+
+.error {
+  font-size: 12px;
+  color: #e24b4a;
+}
+
+.success {
+  position: fixed;
+  top: 2rem;
+  background: #2a4144;
+  color: #fff;
+  border-radius: 12px;
+  padding: 9px;
+  width: 90%;
+  max-width: 360px;
+  z-index: 999;
+}
+
+.successTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.successText {
+  font-size: 14px;
+}
+
+
 
 .page {
   background: #d8edd8;
@@ -146,7 +206,6 @@ h6 {
   resize: none;
   outline: none;
   width: 100%;
-  margin-bottom: 1.5rem;
 }
 
 .radioGroup {
@@ -169,9 +228,16 @@ h6 {
 
 .checkboxRow {
   display: flex;
+  flex-direction: column;
   gap: 8px;
   margin-bottom: 1.5rem;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+.checkboxInner {
+  display: flex;
+  gap: 8px;
+
 }
 
 .submitBtn {
@@ -195,11 +261,11 @@ h6 {
     grid-template-columns: 1fr;
   }
 
-  .page{
+  .page {
     padding-inline: 16px;
   }
 
-  .input{
+  .input {
     padding: 10px 10px;
   }
 }
