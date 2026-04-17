@@ -1,7 +1,7 @@
-import ContactForm from './components/ContactForm';
+import NewsletterForm from "./components/NewsletterForm";
 
 function App() {
-  return <ContactForm />;
+  return <NewsletterForm />;
 }
 
 export default App;

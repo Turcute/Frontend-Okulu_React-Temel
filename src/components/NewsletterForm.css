@@ -1,0 +1,359 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  background-color: #36384D;
+  font-family: "Roboto";
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.card {
+  padding-block: 24px;
+  padding-inline: 24px;
+  max-width: 928px;
+  border-radius: 36px;
+  opacity: 1;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 100px;
+  gap: 64px;
+  margin-bottom: 100px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  padding-top: 73px;
+  padding-left: 40px;
+}
+
+.left h1 {
+  color: #242742;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  margin-bottom: 24px;
+}
+
+.left p {
+  color: #242742;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  margin-bottom: 24px;
+}
+
+.left label {
+  display: flex;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #242742;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+ul>li {
+  padding-bottom: 10px;
+  list-style-type: none;
+  color: #242742;
+}
+
+ul>li:last-child {
+  margin-bottom: 40px;
+  padding-bottom: 0px;
+}
+
+li>img {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  background-color: #FF6155;
+  border-radius: 50%;
+  padding: 5px;
+  align-items: center;
+  padding-top: 7px;
+}
+
+li {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+input {
+  padding-left: 24px;
+  max-width: 376px;
+  height: 56px;
+  opacity: 1;
+  border-radius: 8px;
+  border: 1px solid #19182B40;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.input.inputError {
+  border-color: #FF6155;
+  background: linear-gradient(#FF615526);
+  color: #FF6155;
+}
+
+.input.inputError::placeholder {
+  color: #FF6155;
+}
+
+button:active {
+  background: linear-gradient(#FF6A3A, #FF527B);
+  box-shadow: 0px 16px 32px 0px #FF615580;
+  transform: scale(0.96);
+}
+
+button {
+  max-width: 376px;
+  height: 56px;
+  opacity: 1;
+  border-radius: 8px;
+  background-color: #242742;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+
+}
+
+.right {
+  display: flex;
+  width: 400px;
+  height: 593px;
+  opacity: 1;
+  border-radius: 16px;
+  background: linear-gradient(#FF6A3A, #FF527B);
+  align-items: center;
+}
+
+.error {
+  color: #FF6155;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  text-align: right;
+  padding-right: 32px;
+}
+
+.label {
+  color: #242742;
+}
+
+.errorLabel {
+  color: #FF6155;
+}
+
+.success {
+  max-width: 504px;
+  border-radius: 36px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-top: 48px;
+  padding-bottom: 64px;
+  padding-inline: 64px;
+}
+
+.success-img {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  background-color: #FF6155;
+  border-radius: 50%;
+  padding: 15px;
+  align-items: center;
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+.success h1 {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #242742;
+  margin-bottom: 24px;
+}
+
+.success p {
+  margin-bottom: 40px;
+}
+
+.success span {
+  font-weight: bold;
+}
+
+.success button {
+  width: 100%;
+  max-width: 376px;
+  height: 56px;
+  opacity: 1;
+  border-radius: 8px;
+}
+
+.mobile-img {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    height: auto;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 0;
+    gap: 0;
+    margin-bottom: 0px;
+  }
+
+  .mobile-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    height: 300px;
+    border-radius: 0 0 16px 16px;
+    order: -1;
+  }
+
+  .left {
+    padding: 40px 24px;
+  }
+
+  .left h1 {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0px;
+  }
+
+  .success {
+    border-radius: 0px;
+    margin-top: 0px;
+    padding-top: 149px;
+    padding-inline: 24px;
+  }
+
+  .success h1 {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0px;
+  }
+
+  .success p {
+    margin-bottom: 263px;
+  }
+
+  input,
+  button {
+    max-width: 100%;
+  }
+}
