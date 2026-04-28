@@ -1,7 +1,7 @@
-import NewsletterForm from "./components/NewsletterForm";
+import AgeCalculator from "./components/AgeCalculator";
 
 function App() {
-  return <NewsletterForm />;
+  return <AgeCalculator/>;
 }
 
 export default App;
